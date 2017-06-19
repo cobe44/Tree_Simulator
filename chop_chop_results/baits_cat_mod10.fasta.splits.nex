@@ -1,0 +1,91 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=21;
+TAXLABELS
+[1] 'Common_Rosefinch'
+[2] 'Poouli'
+[3] 'Maui_Creeper'
+[4] 'Kauai_Creeper'
+[5] 'Palila'
+[6] 'Nihoa_Finch'
+[7] 'Laysan_Finch'
+[8] 'Iiwi'
+[9] 'Akohekohe'
+[10] 'Apapane'
+[11] 'Akiapolaau'
+[12] 'Maui_Parrotbill'
+[13] 'Anianiau'
+[14] 'Hawaii_Creeper'
+[15] 'Kauai_Akepa'
+[16] 'Akepa'
+[17] 'Kauai_Amakihi'
+[18] 'Oahu_Amakihi'
+[19] 'Maui_Amakihi'
+[20] 'Hawaii_AmakihiA'
+[21] 'Hawaii_AmakihiB'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=21 nsplits=55;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 1,
+	100	 4,
+	100	 3,
+	100	 3 4,
+	100	 7,
+	100	 6,
+	100	 6 7,
+	100	 5,
+	100	 5 6 7,
+	100	 12,
+	100	 11,
+	76	 11 12,
+	100	 21,
+	100	 20,
+	99	 20 21,
+	100	 19,
+	100	 19 20 21,
+	100	 18,
+	100	 17,
+	100	 17 18,
+	100	 17 18 19 20 21,
+	100	 16,
+	100	 15,
+	100	 15 16,
+	100	 14,
+	100	 14 15 16,
+	100	 14 15 16 17 18 19 20 21,
+	100	 13,
+	99	 13 14 15 16 17 18 19 20 21,
+	100	 1 2 3 4 5 6 7 8 9 10,
+	100	 8,
+	100	 10,
+	100	 9,
+	89	 9 10,
+	100	 8 9 10,
+	98	 1 2 3 4 5 6 7,
+	100	 1 2 3 4,
+	100	 1 2,
+	100	 2,
+	18	 12 13 14 15 16 17 18 19 20 21,
+	9	 8 9,
+	1	 5 6 7 8 9 10,
+	1	 1 2 3 4 8 9 10,
+	6	 11 13 14 15 16 17 18 19 20 21,
+	2	 8 10,
+	1	 11 12 13,
+	0	 19 20,
+	0	 1 2 3,
+	0	 1 2 4,
+	0	 18 19 20 21,
+	0	 11 12 14 15 16 17 18 19 20 21,
+	0	 19 21,
+	0	 12 14 15 16 17 18 19 20 21,
+	0	 11 13,
+	0	 12 13,
+;
+END; [Splits]
+
