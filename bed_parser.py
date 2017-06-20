@@ -3,7 +3,6 @@ import os
 import sys
 import math
 import numpy as np
-import sys
 from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
 from Bio.Seq import Seq
@@ -45,9 +44,11 @@ for record in SeqIO.parse("final.fasta", "fasta"):
     tmp_seq = ""
     names.append(record.id)
     for i in range(bed_data.shape[0]):
-        tmp_seq += record.seq[bed_data[i][0]+(120-lenny)/2:bed_data[i][1]-(120-lenny)/2]
+        if(lenny%2==0):
+            tmp_seq += record.seq[int(bed_data[i][0]+(120-lenny)/2):int(bed_data[i][1]-(120-lenny)/2)+1]
+        else:
+            tmp_seq += record.seq[int(math.floor(bed_data[i][0]+(120-lenny)/2)):int(math.ceil(bed_data[i][1]-(120-lenny)/2))]
     seq_store.append(tmp_seq)
-    print(len(tmp_seq))
 
 proper_seqs = []
 
