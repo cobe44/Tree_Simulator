@@ -49,8 +49,6 @@ seq_store = []
 names = []
 
 if(exclude==0):
-    print("Normal mode achieved")
-    sys.exit()
     for record in SeqIO.parse(fastapath, "fasta"):
         tmp_seq = ""
         names.append(record.id)
@@ -90,8 +88,8 @@ else:
                 else:
                     ex_count += 1
         seq_store.append(tmp_seq)
-        print ex_count
-print bed_data.shape[0]
+        print(ex_count)
+print(bed_data.shape[0])
 
 
 proper_seqs = []
